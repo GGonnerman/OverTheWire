@@ -1,0 +1,6 @@
+#!/bin/bash
+name="9"
+password="UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR"
+sshpass -p "$password" ssh -o StrictHostKeyChecking=no -p 2220 bandit"$name"@bandit.labs.overthewire.org '
+strings data.txt | grep -P "^={4,}.*" | grep -o -P "\w{10,}"
+exit' 2>/dev/null

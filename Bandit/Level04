@@ -1,0 +1,9 @@
+#!/bin/bash
+name="4"
+password="pIwrPrtPN36QITSp3EQaw936yaFoFgAB"
+sshpass -p "$password" ssh -o StrictHostKeyChecking=no -p 2220 bandit"$name"@bandit.labs.overthewire.org '
+cd inhere;
+fileTypes=$(file ./\-*);
+humanReadable=$(echo "$fileTypes" | grep -o -P "./\-file0[0-9](?=: ASCII text)");
+cat "$humanReadable";
+exit' 2>/dev/null

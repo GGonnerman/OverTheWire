@@ -1,0 +1,6 @@
+#!/bin/bash
+name="2"
+password="CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9"
+sshpass -p "$password" ssh -o StrictHostKeyChecking=no -p 2220 bandit"$name"@bandit.labs.overthewire.org '
+cat spaces\ in\ this\ filename;
+exit' 2>/dev/null

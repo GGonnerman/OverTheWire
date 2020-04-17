@@ -1,0 +1,56 @@
+Level 0 -
+	Connect to the server at bandit0@bandit.labs.overthewire.org with the
+	password bandit0. Once connected, use cat to print the contents of the
+	readme file.
+
+Level 1 -
+	Connect to the server then use the command cat ./- to print out the file
+	named -. Without the prefix ./ the cat command runs on your terminal instead
+	of the file you attempted to specify.
+
+Level 2 -
+	Cat out the file name "spaces in this filename" by either using quotes
+	around the file name of backslashes in front of the spaces to escape them so
+	they arent processed as special characters
+
+Level 3 -
+	Change directory into the "inhere" folder and use ls -A to print a list of
+	all file/subdirectories including ones that start with a . ("hidden files")
+	The run cat .hidden to print out the file.
+
+Level 4 -
+	Change directory into the "inhere" folder the run the file command to see
+	the type of file. Pass it ./\-* using the * wildflag to select all files.
+	Then cat out the file that contains "ASCII text" which is a human readable
+	format.
+
+Level 5 -
+	Change directory into "inhere". Use the find command with the -size flag to
+	specify the filesize. Pass it "1033c" to indicate 1033 bytes then cat out
+	the contents removing whitespace.
+
+Level 6 -
+	The clue "somewhere on the server" indicated to move to the root directory
+	by doing cd /;. Then use the find command with the directory . Specify the
+	-group bandit6, -user bandit7, and -size 33c. Then add 2>/dev/null to hide
+	warning and cat out the resulted file.
+
+Level 7 -
+	Use the grep command with the -P flag to access 'pearl grep' (the full grep
+	library) and use a "positive lookbehind" (?<=word) to find text after a
+	specific word, in this case "millionth" and then capture all character after
+	it but before a linebreak, .*
+
+Level 8 -
+	Sort the contents of data.txt then pipe that into uniq with the -u flag to
+	only return unique lines. (Explaination: uniq only checks adjacent lines so
+	they need to be sorted before it is effective)
+
+Level 9 -
+	Use strings on data.txt to print the readable contents of the file. Pipe
+	that into grep finding a startline (^) and 4 or more equal signs (={4,})
+	then any characters (.*).
+
+Level 10 -
+	Use the base64 command with the -d flag to indicate decoding and pass the
+	file data.txt
