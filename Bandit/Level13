@@ -1,0 +1,8 @@
+#!/bin/bash
+name="13"
+password="8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL"
+sshpass -p "$password" ssh -o StrictHostKeyChecking=no -p 2220 bandit"$name"@bandit.labs.overthewire.org '
+ssh -o StrictHostKeyChecking=no -i sshkey.private bandit14@localhost "
+cat /etc/bandit_pass/bandit14;
+exit" 2>/dev/null
+exit' 2>/dev/null

@@ -1,0 +1,8 @@
+#!/bin/bash
+name="16"
+password="cluFn7wTiGryunymYOu4RcffSxQluehd"
+sshpass -p "$password" ssh -o StrictHostKeyChecking=no -p 2220 bandit"$name"@bandit.labs.overthewire.org '
+nmap localhost -p31000-32000
+echo "cluFn7wTiGryunymYOu4RcffSxQluehd" | openssl s_client -ign_eof -connect localhost:31790
+
+exit' 2>/dev/null

@@ -1,0 +1,7 @@
+#!/bin/bash
+name="15"
+password="BfMYroe26WYalil77FoDi9qh59eK5xNr"
+sshpass -p "$password" ssh -o StrictHostKeyChecking=no -p 2220 bandit"$name"@bandit.labs.overthewire.org '
+response=$(echo "BfMYroe26WYalil77FoDi9qh59eK5xNr" | openssl s_client -ign_eof -connect localhost:30001)
+echo "$response" | tr -d "\n" | grep -o -P "(?<=Correct!).{32}";
+exit' 2>/dev/null

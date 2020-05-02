@@ -1,0 +1,20 @@
+#!/bin/bash
+name="12"
+password="5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu"
+sshpass -p "$password" ssh -o StrictHostKeyChecking=no -p 2220 bandit"$name"@bandit.labs.overthewire.org '
+rm -fr /tmp/myname123/*;
+cp data.txt /tmp/myname123;
+cd /tmp/myname123;
+touch data2.gz;
+xxd -r data.txt > data2.gz;
+gunzip -c data2.gz > data3;
+bunzip2 -c data3 > data4.gz;
+gunzip -c data4.gz > data5;
+tar xf data5;
+tar xf data5.bin;
+bunzip2 -c data6.bin > data7;
+tar xf data7;
+mv data8.bin data8.gz;
+gunzip data8.gz;
+cat data8 | grep -o -P "\w{32}";
+exit' 2>/dev/null

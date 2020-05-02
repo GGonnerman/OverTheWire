@@ -54,3 +54,35 @@ Level 9 -
 Level 10 -
 	Use the base64 command with the -d flag to indicate decoding and pass the
 	file data.txt
+
+Level 11 -
+	Cat the contents of data.txt into the tr function to shift all characters.
+	Use the replacement A-Z into N-ZA-M in order to shift all characters 13
+	letters later. then do the same for lower case letters and combine them to
+	a single replacement, "[A-Za-z]" to "[N-ZA-Mn-za-m]".
+
+Level 12 -
+	Copy the data into /tmp/myname123 using the cp command. You know you start
+	with a hex dump so you have to use xxd -r  to extract it. Then use the file
+	command to find the file type of your data. After finding the type of data
+	there are a few possibilities - with a gzip file, rename the file to
+	*name*.gz then use gunzip to extract it. With a bzip file use bunzip2 to
+	extract it. And when you get a POSIX tar archive use tar xf to extract it.
+	After each, use ls to see the new file created (for this reason i'd
+	recommend deleting all unused/old files). Once you get to ASCII text, use
+	cat to print out the plain text.
+
+Level 13 -
+	To connect to a host using a sshkey you can use the ssh command with the -i
+	flag and passing the sshkey.private file. Then passing the host to connect
+	to, bandit14@localhost in this case. Then catting out the file
+	/etc/bandit_pass/bandit14
+
+Level 14 -
+	Use the nc command to connect to a host/port. nc localhost 30000 then paste
+	in the password retrieved from level 13.
+
+Level 15 -
+	To connect using ssl encryption you have to use the s_client on open ssl
+	passing it the connect flag with localhost:30001 the pasting the command
+	you retrieved from the previous level.
